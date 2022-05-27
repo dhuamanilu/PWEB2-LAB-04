@@ -11,6 +11,10 @@ def esEscalar(m):
         return False
   return True
 
+def esUnitaria(m):
+  return m[0][0] == 1 and esEscalar(m)
+
+
 lista=[]
 valor=int(input("Ingrese orden de la matriz escalar: "))
 for i in range (valor):
@@ -23,5 +27,9 @@ if(esEscalar(lista)):
   print("La matriz es escalar")
 else:
   print("La matriz no es escalar")
+if(esUnitaria(lista)):
+  print("La matriz es unitaria")
+else:
+  print("La matriz no es unitaria")
 
 
