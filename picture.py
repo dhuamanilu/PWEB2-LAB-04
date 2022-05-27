@@ -47,7 +47,12 @@ class Picture:
     return Picture(auxi)
 
   def up(self, p):
-    return Picture(None)
+    auxi=[]
+    for i in range(len(p.img)):
+      auxi.append(p.img[i])
+    for i in range(len(self.img)):
+      auxi.append(self.img[i])
+    return Picture(auxi)
 
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la
