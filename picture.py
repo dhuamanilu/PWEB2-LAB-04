@@ -13,8 +13,14 @@ class Picture:
 
   def verticalMirror(self):
     """ Devuelve el espejo vertical de la imagen """ 
-    return Picture(self.img[::-1])
-
+    auxi=[]
+    for i in range(len(self.img)):
+      stri=""
+      for j in range (len(self.img[i])-1,-1,-1):
+        stri+=self.img[i][j]
+      auxi.append(stri)
+    return Picture(auxi)
+  
   def horizontalMirror(self):
     """ Devuelve el espejo horizontal de la imagen """
     auxi=[]
