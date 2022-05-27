@@ -18,11 +18,13 @@ def esUnitaria(m):
 lista=[]
 valor=int(input("Ingrese orden de la matriz escalar: "))
 for i in range (valor):
+  auxi=[]
   for j in range(valor):
-    auxi=[]
     auxi.append(int(input("Ingrese valor: ")))
   lista.append(auxi)
 
+print("esta es la lista: ")
+print(lista)
 if(esEscalar(lista)):
   print("La matriz es escalar")
 else:
