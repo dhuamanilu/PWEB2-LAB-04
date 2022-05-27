@@ -74,13 +74,17 @@ class Picture:
     return Picture(auxi.img)
 
   def verticalRepeat(self, n):
-    return Picture(None)
+    copia=[]
+    rpta=[]
+    for i in range (len(self.img)):
+      copia.append(self.img[i])
+    for j in range (n):
+      rpta+=copia
+    return Picture(rpta)
 
   #Extra: Sólo para realmente viciosos 
   def rotate(self):
     """Devuelve una figura rotada en 90 grados, puede ser en sentido horario
     o antihorario"""
     return Picture(None)
-  def imprimir(self):
-    for i in range (len(self.img)):
-      print(self.img[i]) 
+  
