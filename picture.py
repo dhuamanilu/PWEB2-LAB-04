@@ -12,12 +12,15 @@ class Picture:
     return inverter[color]
 
   def verticalMirror(self):
-    """ Devuelve el espejo vertical de la imagen """
-    return Picture(None)
+    """ Devuelve el espejo vertical de la imagen """ 
+    return Picture(self.img[::-1])
 
   def horizontalMirror(self):
     """ Devuelve el espejo horizontal de la imagen """
-    return Picture(None)
+    auxi=[]
+    for i in range (len(self.img)-1,-1,-1):
+      auxi.append(self.img[i])
+    return Picture(auxi)
 
   def negative(self):
     """ Devuelve un negativo de la imagen """
@@ -49,4 +52,6 @@ class Picture:
     """Devuelve una figura rotada en 90 grados, puede ser en sentido horario
     o antihorario"""
     return Picture(None)
-
+  def imprimir(self):
+    for i in range (len(self.img)):
+      print(self.img[i]) 
