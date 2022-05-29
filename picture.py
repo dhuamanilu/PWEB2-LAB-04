@@ -62,9 +62,14 @@ class Picture:
         figura actual """
     auxi=[]
     for i in range(len(self.img)):
-      auxi.append(self.img[i])
-    for i in range(len(p.img)):
-      auxi.append(p.img[i])
+      stri=""
+      for j in range (len(self.img[i])):
+        if(p.img[i][j]!=" "):
+          stri+=p.img[i][j]
+        else:
+          stri+=self.img[i][j]
+      auxi.append(stri)
+
     
     return Picture(auxi)   
   
